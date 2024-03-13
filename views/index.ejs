@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cocktail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>Today's cocktail</h1>
+  <div class="card" style="background-image: url('<%= img %>')">
+    <div class="overlay">
+      <p>Ingredient: </p>
+        <ul>
+        <% for (let i=0; i<measures.length; i++) { %>
+            <li> <%= measures[i]%> of <%= ingredients[i]%></li>
+            <% } %>
+          </ul>
+      
+      <hr  style="display: none">
+      <p>
+        <%= recipe.strInstructions %>
+      </p>
+    </div>
+    
+  </div>
+  <p class="user">
+    <%= recipe.strDrink %>
+  </p>
+</body>
+
+</html>
